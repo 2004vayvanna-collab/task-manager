@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Task Manager · DevOps Lab</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><main><header><div class="brand">TM <span>DEVOPS LAB / 01</span></div><div id="account" hidden><span id="username"></span> <button id="logout">Sign out</button></div></header>
+<section class="intro"><p class="eyebrow">MAKE PROGRESS, ONE TASK AT A TIME</p><h1>A little structure.<br>A lot of momentum.</h1><p>Create, prioritize, and finish your work.</p></section>
+<section id="auth-panel" class="workspace">
+<h2 id="auth-heading">Welcome back</h2><p id="auth-help">Sign in to your personal task list.</p>
+<form id="auth-form"><label>Username<input id="auth-user" autocomplete="username" pattern="[a-z0-9_]{3,40}" minlength="3" maxlength="40" required></label>
+<label>Password<input id="auth-password" type="password" autocomplete="current-password" maxlength="72" required></label>
+<button id="auth-submit" type="submit">Sign in</button></form>
+<p id="auth-message" role="status" aria-live="polite"></p><button id="auth-switch" type="button">Create an account</button>
+</section><div id="dashboard" hidden><section class="stats" aria-label="Task statistics"><div><strong id="total">0</strong><span>Total tasks</span></div><div><strong id="open">0</strong><span>In progress</span></div><div><strong id="done">0</strong><span>Completed</span></div></section>
+<section class="workspace"><div class="heading"><h2>Your tasks</h2><span id="count"></span></div>
+<form id="task-form"><label for="title" class="sr-only">Task title</label><input id="title" maxlength="120" placeholder="What do you want to accomplish?" required><label for="priority" class="sr-only">Priority</label><select id="priority"><option value="LOW">Low priority</option><option value="MEDIUM" selected>Medium priority</option><option value="HIGH">High priority</option></select><label for="due-date" class="sr-only">Due date</label><input id="due-date" type="date" aria-label="Due date"><button id="save-task" type="submit">+ Add task</button><button id="cancel-edit" type="button" hidden>Cancel</button></form>
+<div class="filters" role="group" aria-label="Filter tasks"><button data-filter="all" aria-pressed="true">All tasks</button><button data-filter="open" aria-pressed="false">In progress</button><button data-filter="done" aria-pressed="false">Completed</button></div>
+<p id="message" role="status" aria-live="polite"></p><ul id="tasks"></ul><p id="empty">Loading tasks…</p></section>
+</div><footer>Built to learn. Ready for your next commit.<span>Spring Boot + PostgreSQL</span></footer></main></body></html>

@@ -1,0 +1,9 @@
+target/
+.env
+*.log
+.terraform/
+*.tfstate*
+*.tfvars
+!*.tfvars.example
+tfplan
+kubeconfig*

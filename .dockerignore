@@ -1,0 +1,8 @@
+.git
+.env
+target
+infra
+docs
+k8s
+argocd
+*.zip
