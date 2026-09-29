@@ -7,4 +7,4 @@ resources:
 images:
   - name: task-manager
     newName: haithem77/task-manager
-    newTag: local
+    newTag: 0.1.0
