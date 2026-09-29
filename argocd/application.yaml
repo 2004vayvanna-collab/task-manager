@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR_GITHUB_USERNAME/task-manager-gitops.git
+    repoURL: https://github.com/2004vayvanna-collab/task-manager.git
     targetRevision: main
     path: k8s
   destination:
