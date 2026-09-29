@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'devops-lab' }
+  agent any
   options { timestamps(); disableConcurrentBuilds(); timeout(time: 30, unit: 'MINUTES'); skipDefaultCheckout(true) }
   parameters {
     string(name: 'DOCKER_IMAGE', defaultValue: 'haithem77/task-manager', description: 'Your Docker Hub repository')
@@ -15,7 +15,7 @@ pipeline {
     stage('Validate configuration') {
       steps {
         sh '''
-          test "$GITOPS_REPO_URL" != 'https://github.com/YOUR_GITHUB_USERNAME/task-manager-gitops.git'
+          test "$GITOPS_REPO_URL" != 'https://github.com/2004vayvanna-collab/task-manager-gitops.git'
           python3 -c 'import os,re; assert re.fullmatch(r"[a-z0-9][a-z0-9._/-]*",os.environ["DOCKER_IMAGE"]), "Invalid image name"'
         '''
       }
